@@ -9,12 +9,12 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
     [SerializeField] float rangeAttack = 0.5f;
     [SerializeField] float rangeAgro = 10;
 
-    string id = "NPC";
+    [SerializeField] string id = "NPC";
     public string ID => id;
     public bool IsValid => true;
 
-    //MetamorphComponent metamorphComponent = nullptr;
-    //public MetamorphComponent MetamorphComponent => metamorphComponent;
+    F_MetamorphComponent metamorphComponent = null;
+    public F_MetamorphComponent MetamorphComponent => metamorphComponent;
     private void Start() => InitItem();
     private void OnDestroy() => DestroyItem();
     public void MakeAction(Transform _target)
@@ -41,7 +41,7 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
     {
         hp = hpMax;
         F_NPCManager.Instance?.Add(this);
-        //metamorphComponent = GetComponent<MetamorphComponent>();
+        metamorphComponent = GetComponent<F_MetamorphComponent>();
     }
     public void DestroyItem() => F_NPCManager.Instance?.Remove(this);
     public void Enable()

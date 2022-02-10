@@ -15,17 +15,14 @@ public class F_PlayerMovement : MonoBehaviour
 
     #endregion
     #region Methods
-
     public void InitMovement()
     {
         controller = GetComponent<CharacterController>();
         if (!IsValid) return;
-
         InputManager.Instance.BindAxis(AxisType.HORIZONTAL_AXIS, HorizontalMovement);
         InputManager.Instance.BindAxis(AxisType.VERTICAL_AXIS, VerticalMovement);
-        InputManager.Instance.BindAxis(AxisType.YAW_AXIS, YawRotation);
+        InputManager.Instance.BindAxis(AxisType.MOUSEX, YawRotation);
     }
-
     void HorizontalMovement(float _axis)
     {
         if (!IsValid) return;

@@ -18,5 +18,6 @@ public enum AxisType
     NONE,
     HORIZONTAL_AXIS,
     VERTICAL_AXIS,
-    YAW_AXIS
+    MOUSEX,
+    MOUSEY,
 }
