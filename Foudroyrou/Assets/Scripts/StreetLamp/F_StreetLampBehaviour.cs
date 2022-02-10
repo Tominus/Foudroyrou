@@ -8,7 +8,7 @@ public class F_StreetLampBehaviour : MonoBehaviour
     public event Action OnLampActivated = null, OnLampDesactivated = null, OnLampDetectPlayer = null;
 
     [SerializeField] Transform detectionSocket = null;
-    [SerializeField] bool bIsActivated = false;
+    [SerializeField] bool bIsActivated = false, bIsNight = false;
     [SerializeField] float fAnimOnTime = 1,
                            fAnimOffTime = 1,
                            fMinRandomCooldown = 5,
@@ -43,14 +43,23 @@ public class F_StreetLampBehaviour : MonoBehaviour
 
     void InitAbo()
     {
-        OnAnimLightStart += (state) => bIsActivated = state;
-        Invoke(nameof(StartLampAnimOn), 0.1f);
+        F_DayCycle.Instance.OnNight += StartNightLamp;
+        F_DayCycle.Instance.OnDay += StartDayLamp;
         InvokeRepeating(nameof(Detection), Random.Range(0.0f, 1.0f), fDetectionRate);
-        
-        /*
-         F_World.Instance.DayManager.OnNight += StartLampAnimOn;
-         */
-        //TODO ABO OnNight 
+    }
+
+    void StartNightLamp()
+    {
+        OnAnimLightStart += (state) => bIsActivated = state;
+        bIsNight = true;
+        Invoke(nameof(StartLampAnimOn), GetRandomTime());
+    }
+    void StartDayLamp()
+    {
+        bIsNight = false;
+        CancelInvoke();
+        OnAnimLightStart?.Invoke(false);
+        OnLampDesactivated?.Invoke();
     }
 
     void Detection()
@@ -76,28 +85,31 @@ public class F_StreetLampBehaviour : MonoBehaviour
 
             currentRageComponent.RemoveRage(fRageCureAmount);
             currentRageComponent.SetGrowRage(false);
-            //TODO REMOVE RAGE;
         }
     }
 
     void StartLampAnimOn()
     {
+        if (!bIsNight) return;
         OnAnimLightStart?.Invoke(true);
         Invoke(nameof(ActivateLamp), fAnimOnTime);
     }
     void ActivateLamp()
     {
+        if (!bIsNight) return;
         OnLampActivated?.Invoke();
         Invoke(nameof(StartLampAnimOff), GetRandomTime());
     }
 
     void StartLampAnimOff()
     {
+        if (!bIsNight) return;
         OnAnimLightStart?.Invoke(false);
         Invoke(nameof(DesactivateLamp), fAnimOffTime);
     }
     void DesactivateLamp()
     {
+        if (!bIsNight) return;
         OnLampDesactivated?.Invoke();
         Invoke(nameof(StartLampAnimOn), GetRandomTime());
     }

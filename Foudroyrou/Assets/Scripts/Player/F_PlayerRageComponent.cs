@@ -6,9 +6,13 @@ public class F_PlayerRageComponent : MonoBehaviour
     public event Action OnMaxRage = null;
     public event Action<float> OnRagePercent = null;
 
-    [SerializeField] bool bGrowRage = false;
+    [SerializeField] bool bGrowRage = false, bIsNight = false;
     [SerializeField] float fRageAmount = 0, fRageMax = 100, fPassifRageGrow = 0.1f;
 
+    private void Start()
+    {
+        InitSub();
+    }
     private void Update()
     {
         UpdateRage();
@@ -19,9 +23,22 @@ public class F_PlayerRageComponent : MonoBehaviour
         OnRagePercent = null;
     }
 
+    void InitSub()
+    {
+        F_DayCycle.Instance.OnNight += () =>
+        {
+            bIsNight = true;
+            SetGrowRage(true);
+        };
+        F_DayCycle.Instance.OnDay += () =>
+        {
+            bIsNight = false;
+            SetGrowRage(false);
+        };
+    }
     void UpdateRage()
     {
-        if (!bGrowRage) return;
+        if (!bGrowRage || !bIsNight) return;
         AddRage(fPassifRageGrow * Time.deltaTime);
     }
 
@@ -53,5 +70,4 @@ public class F_PlayerRageComponent : MonoBehaviour
     {
         bGrowRage = _state;
     }
-    //onnight -> grow rage
 }

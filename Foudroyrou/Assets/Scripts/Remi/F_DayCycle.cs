@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class F_DayCycle : MonoBehaviour
+public class F_DayCycle : F_Singleton<F_DayCycle>
 {
 #region event
     public event Action OnDay = null;
@@ -38,6 +38,12 @@ public class F_DayCycle : MonoBehaviour
         //init Rotation speed (start at day speed)
         rotationIncreasePerTick = (sunTickRate/(dayDuration * 60f))* ((nightTimeTrigger - dayTimeTrigger)*15f);
         InvokeRepeating("TimeUpdate", 0, sunTickRate);
+    }
+    private void OnDestroy()
+    {
+        OnDay = null;
+        OnNight = null;
+        OnTimeChange = null;
     }
 
     void TimeUpdate()
