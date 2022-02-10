@@ -53,7 +53,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -9.858649, y: 0, z: 1.6754204}
+      - m_Value: {x: -8.254339, y: 0, z: 5.6449866}
         m_Name: End
         m_Overridden: 1
     m_Vector4f:

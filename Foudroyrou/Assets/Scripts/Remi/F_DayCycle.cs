@@ -38,6 +38,7 @@ public class F_DayCycle : F_Singleton<F_DayCycle>
         //init Rotation speed (start at day speed)
         rotationIncreasePerTick = (sunTickRate/(dayDuration * 60f))* ((nightTimeTrigger - dayTimeTrigger)*15f);
         InvokeRepeating("TimeUpdate", 0, sunTickRate);
+        OnTimeChange += F_UIManager.Instance.TimeUI.UpdateTimeText;
     }
     private void OnDestroy()
     {

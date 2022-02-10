@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5.678665, g: 5.988846, b: 8.800156, a: 1}
+  m_IndirectSpecularColor: {r: 5.277153, g: 5.1922607, b: 6.2618637, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -198,7 +198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1004099463119258923, guid: 9f41412cdd993254cb97b7c64ca287ca, type: 3}
       propertyPath: m_FillAmount
-      value: 1
+      value: 0.449
       objectReference: {fileID: 0}
     - target: {fileID: 1004099463700460969, guid: 9f41412cdd993254cb97b7c64ca287ca, type: 3}
       propertyPath: m_Name
@@ -637,26 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0733ac2773bc940abdb3f05fca0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1232819764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3147716563395157460, guid: 04483248f57da194a8d3e506bbad6b0e, type: 3}
-  m_PrefabInstance: {fileID: 3147716562186588467}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1232819770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232819764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f8453abc9c65142a95b332b8d61616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rageUI: {fileID: 696711507}
-  ammoUI: {fileID: 1148313808}
-  timeUI: {fileID: 1342788772}
 --- !u!1 &1330133208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1041,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1232819770, guid: 04483248f57da194a8d3e506bbad6b0e, type: 3}
+      propertyPath: ammoUI
+      value: 
+      objectReference: {fileID: 1148313808}
+    - target: {fileID: 1232819770, guid: 04483248f57da194a8d3e506bbad6b0e, type: 3}
+      propertyPath: rageUI
+      value: 
+      objectReference: {fileID: 696711507}
+    - target: {fileID: 1232819770, guid: 04483248f57da194a8d3e506bbad6b0e, type: 3}
+      propertyPath: timeUI
+      value: 
+      objectReference: {fileID: 1342788772}
     - target: {fileID: 3147716563395157460, guid: 04483248f57da194a8d3e506bbad6b0e, type: 3}
       propertyPath: m_Name
       value: Logic
