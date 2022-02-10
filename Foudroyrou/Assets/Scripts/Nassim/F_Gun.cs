@@ -8,11 +8,7 @@ public class F_Gun : MonoBehaviour
     [SerializeField] float damageDeal = 10;
     [SerializeField] float range = 10;
     [SerializeField] LayerMask hitLayer = 0;
-    void Update()
-    {
-        CooldownReset();
-        Shoot();
-    }
+    void Update() => CooldownReset();
     void CooldownReset()
     {
         if (shootLoad) return;

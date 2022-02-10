@@ -10,8 +10,8 @@ public class F_NPCManager : F_Singleton<F_NPCManager>, IManager<string, F_NPC>
 
     private void Start()
     {
-        //F_DayManager.Instance.OnNight += TransformAllNPC;
-        //F_DayManager.Instance.OnNight += () => currentTarget = target;
+        F_DayCycle.Instance.OnNight += TransformAllNPC;
+        F_DayCycle.Instance.OnNight += () => currentTarget = target;
     }
     void Update()
     {

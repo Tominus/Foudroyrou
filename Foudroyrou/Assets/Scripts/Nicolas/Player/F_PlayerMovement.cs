@@ -14,7 +14,6 @@ public class F_PlayerMovement : MonoBehaviour
     public bool IsValid => controller;
 
     #endregion
-
     #region Methods
 
     public void InitMovement()

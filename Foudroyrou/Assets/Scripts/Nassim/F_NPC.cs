@@ -37,7 +37,6 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
             Destroy(gameObject);
         }
     }
-
     public void InitItem()
     {
         hp = hpMax;
