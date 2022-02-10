@@ -26,8 +26,9 @@ public class F_Gun : MonoBehaviour
     public void Shoot()
     {
         if (!shootLoad) return;
+        shootLoad = false;
         bool _hit = Physics.Raycast(transform.position,transform.forward,out RaycastHit _hitRay, range, hitLayer);
-        Debug.DrawRay(transform.position, transform.forward * range,_hit ? Color.red : Color.green);
+        Debug.DrawRay(transform.position, transform.forward * range,_hit ? Color.red : Color.green,0.2f);
         if (!_hit) return;
         F_NPC _npc = _hitRay.collider.GetComponent<F_NPC>();
         _npc?.TakeDamage(damageDeal);

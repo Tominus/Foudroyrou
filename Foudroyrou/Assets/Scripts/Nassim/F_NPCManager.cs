@@ -10,8 +10,8 @@ public class F_NPCManager : F_Singleton<F_NPCManager>, IManager<string, F_NPC>
 
     private void Start()
     {
-        //DayManager.Instance.OnNight += TransformAllNPC;
-        //DayManager.Instance.OnNight += () => currentTarget = target;
+        //F_DayManager.Instance.OnNight += TransformAllNPC;
+        //F_DayManager.Instance.OnNight += () => currentTarget = target;
     }
     void Update()
     {
@@ -27,7 +27,7 @@ public class F_NPCManager : F_Singleton<F_NPCManager>, IManager<string, F_NPC>
 
     public void Add(F_NPC _item)
     {
-        if (Exist(_item)) return;
+        if (Exist(_item.ID)) return;
         items.Add(_item.ID, _item);
     }
 
