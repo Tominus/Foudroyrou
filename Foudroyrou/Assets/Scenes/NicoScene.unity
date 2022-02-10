@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 763526656}
   test: 1
+  bloom: {fileID: 0}
 --- !u!1 &1232223037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1075,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1004099462122855465, guid: 9f41412cdd993254cb97b7c64ca287ca, type: 3}
+      propertyPath: volume
+      value: 
+      objectReference: {fileID: 763526656}
     - target: {fileID: 1004099462529443048, guid: 9f41412cdd993254cb97b7c64ca287ca, type: 3}
       propertyPath: m_Type
       value: 1

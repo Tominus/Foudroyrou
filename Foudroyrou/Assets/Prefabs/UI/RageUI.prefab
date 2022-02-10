@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d2919c0af7e64eb69f00c1777e84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rageBar: {fileID: 1938479607467483507}
+  rageBar: {fileID: 1938479608482248823}
+  volume: {fileID: 0}
 --- !u!1 &1938479608482248821
 GameObject:
   m_ObjectHideFlags: 0

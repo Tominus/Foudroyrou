@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1938479607467483509, guid: f16ecc6bdcff74d4295b15928b6c94e1, type: 3}
+      propertyPath: rageBar
+      value: 
+      objectReference: {fileID: 1004099463119258923}
     - target: {fileID: 1938479608482248822, guid: f16ecc6bdcff74d4295b15928b6c94e1, type: 3}
       propertyPath: m_SizeDelta.x
       value: -4
@@ -340,6 +344,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1938479607467483506, guid: f16ecc6bdcff74d4295b15928b6c94e1, type: 3}
   m_PrefabInstance: {fileID: 1660029232661560668}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1004099463119258923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1938479608482248823, guid: f16ecc6bdcff74d4295b15928b6c94e1, type: 3}
+  m_PrefabInstance: {fileID: 1660029232661560668}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4220268895649593288
 PrefabInstance:
   m_ObjectHideFlags: 0
