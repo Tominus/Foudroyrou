@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 
 [RequireComponent(typeof(F_PlayerMovement), typeof(F_PlayerRageComponent))]
 public class F_Player : MonoBehaviour
