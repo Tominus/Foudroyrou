@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class F_Gun : MonoBehaviour
 {
     float shootTime = 0;
     bool shootLoad = true;
@@ -8,7 +8,11 @@ public class Gun : MonoBehaviour
     [SerializeField] float damageDeal = 10;
     [SerializeField] float range = 10;
     [SerializeField] LayerMask hitLayer = 0;
-    void Update() => CooldownReset();
+    void Update()
+    {
+        CooldownReset();
+        Shoot();
+    }
     void CooldownReset()
     {
         if (shootLoad) return;
@@ -22,10 +26,11 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         if (!shootLoad) return;
+        shootLoad = false;
         bool _hit = Physics.Raycast(transform.position,transform.forward,out RaycastHit _hitRay, range, hitLayer);
-        Debug.DrawRay(transform.position, transform.forward * range,_hit ? Color.red : Color.green);
+        Debug.DrawRay(transform.position, transform.forward * range,_hit ? Color.red : Color.green,0.2f);
         if (!_hit) return;
-        NPC _npc = _hitRay.collider.GetComponent<NPC>();
+        F_NPC _npc = _hitRay.collider.GetComponent<F_NPC>();
         _npc?.TakeDamage(damageDeal);
     }
 }
