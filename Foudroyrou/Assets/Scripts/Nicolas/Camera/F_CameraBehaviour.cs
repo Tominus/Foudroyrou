@@ -14,7 +14,7 @@ public abstract class F_CameraBehaviour : MonoBehaviour
 
     #region Methods
 
-    virtual protected void LateeUpdate()
+    virtual protected void LateUpdate()
     {
         MoveTo(settings.TargetOffset);
         RotateTo(settings.TargetView);
