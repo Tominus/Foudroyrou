@@ -37,7 +37,6 @@ public class F_DayCycle : MonoBehaviour
         currentTime = 0;
         //init Rotation speed (start at day speed)
         rotationIncreasePerTick = (sunTickRate/(dayDuration * 60f))* ((nightTimeTrigger - dayTimeTrigger)*15f);
-        Debug.Log(rotationIncreasePerTick);
         InvokeRepeating("TimeUpdate", 0, sunTickRate);
     }
 
