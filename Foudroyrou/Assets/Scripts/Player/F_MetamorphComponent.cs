@@ -6,18 +6,11 @@ public class F_MetamorphComponent : MonoBehaviour
     public event Action<Transform> OnMetamorph = null;
 
     [SerializeField] Transform humanBody = null, meshSocket = null, wereWolfBodyPrefab = null;
-
     public bool IsValid => humanBody && meshSocket && wereWolfBodyPrefab;
-
-    private void Start()
-    {
-        MetaMorph();
-    }
     private void OnDestroy()
     {
         OnMetamorph = null;
     }
-
     public void MetaMorph()
     {
         if (!IsValid) return;

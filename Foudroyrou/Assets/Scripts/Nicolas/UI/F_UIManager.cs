@@ -10,7 +10,7 @@ public class F_UIManager : F_Singleton<F_UIManager>
     [SerializeField] F_TimeUI timeUI = null;
     public bool IsValid => rageUI && ammoUI && timeUI;
 
-    public F_RageUI RageUI => RageUI;
+    public F_RageUI RageUI => rageUI;
     public F_AmmoUI AmmoUI => ammoUI;
     public F_TimeUI TimeUI => timeUI;
 

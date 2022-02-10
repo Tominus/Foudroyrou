@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class F_RageUI : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class F_RageUI : MonoBehaviour
     public void UpdateRageBar(float _amount)
     {
         if (!IsValid) return;
+        Debug.Log(_amount);
         rageBar.fillAmount = _amount;
     }
 
