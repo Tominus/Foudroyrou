@@ -47,6 +47,7 @@ MonoBehaviour:
   shootCooldown: 0.1
   damageDeal: 10
   range: 10
+  ammoAmountMax: 50
   hitLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -144,7 +145,6 @@ GameObject:
   - component: {fileID: 7306806888349377674}
   - component: {fileID: 7306806888349377685}
   - component: {fileID: 7306806888349377684}
-  - component: {fileID: 5809413708368241863}
   - component: {fileID: 4295261775250534927}
   - component: {fileID: 7088117561132673294}
   m_Layer: 6
@@ -250,21 +250,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5809413708368241863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7306806888349377687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a30cb998417b13408cd3eec62909219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 7306806888349377684}
-  moveSpeed: 50
-  rotateSpeed: 150
 --- !u!114 &4295261775250534927
 MonoBehaviour:
   m_ObjectHideFlags: 0

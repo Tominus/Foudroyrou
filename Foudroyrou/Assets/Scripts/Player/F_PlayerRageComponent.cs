@@ -12,6 +12,8 @@ public class F_PlayerRageComponent : MonoBehaviour
     private void Start()
     {
         InitSub();
+        OnRagePercent += F_UIManager.Instance.RageUI.UpdateRageBar;
+        OnRagePercent?.Invoke(0);
     }
     private void Update()
     {
