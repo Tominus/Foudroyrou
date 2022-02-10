@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class F_NPCManager : F_Singleton<F_NPCManager>, IManager<string, F_NPC>
 {
-    [SerializeField] Transform target = null;
-    Transform currentTarget = null;
+    [SerializeField] F_Player target = null;
+    F_Player currentTarget = null;
     public Dictionary<string, F_NPC> items = new Dictionary<string, F_NPC>();
     public Dictionary<string, F_NPC> Items => items;
 
