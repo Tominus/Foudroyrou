@@ -9,7 +9,7 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
     [SerializeField] float rangeAttack = 0.5f;
     [SerializeField] float rangeAgro = 10;
 
-    string id = "NPC";
+    [SerializeField] string id = "NPC";
     public string ID => id;
     public bool IsValid => true;
 

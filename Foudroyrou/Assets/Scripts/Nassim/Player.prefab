@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780c947147d5f7c4696eb7ade6958b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootCooldown: 1
+  shootCooldown: 0.1
   damageDeal: 10
   range: 10
   hitLayer:

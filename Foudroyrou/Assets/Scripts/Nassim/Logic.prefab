@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - keyCode: 323
-    keyType: 1
+    keyType: 2
     actionType: 3
   axis:
   - indexAxis: 0
@@ -73,6 +73,9 @@ MonoBehaviour:
   - indexAxis: 0
     axisName: Horizontal
     axisType: 1
+  - indexAxis: 0
+    axisName: MouseY
+    axisType: 4
 --- !u!114 &3147716563395157464
 MonoBehaviour:
   m_ObjectHideFlags: 0

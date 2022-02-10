@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8731442741881816258}
   - component: {fileID: 8731442741881816257}
   - component: {fileID: 8731442741881816256}
+  - component: {fileID: 6600846623165585532}
   m_Layer: 6
   m_Name: NPC
   m_TagString: Untagged
@@ -112,3 +113,19 @@ MonoBehaviour:
   hpMax: 100
   rangeAttack: 0.5
   rangeAgro: 10
+  id: NPC2
+--- !u!114 &6600846623165585532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731442741881816255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da677e37e9fa604bb245e214b3594e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humanBody: {fileID: 0}
+  meshSocket: {fileID: 0}
+  wereWolfBodyPrefab: {fileID: 0}
