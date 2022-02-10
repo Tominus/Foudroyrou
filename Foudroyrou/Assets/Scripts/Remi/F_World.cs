@@ -1,10 +1,6 @@
 using UnityEngine;
 
-public class F_World : MonoBehaviour
+public class F_World : F_Singleton<F_World>
 {
-	#region f/p
-	#endregion
-
-	#region methods
-	#endregion
+    
 }
