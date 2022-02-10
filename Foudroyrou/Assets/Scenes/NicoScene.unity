@@ -754,12 +754,12 @@ MonoBehaviour:
     smoothMove: 0
     smoothRotation: 0
     isLocal: 1
-    xOffet: -3
-    yOffet: 3
-    zOffset: 0
+    xOffet: -1.5
+    yOffet: 0.5
+    zOffset: 1
     xView: 0
-    yView: 1.3
-    zView: 0
+    yView: 0.5
+    zView: 1
 --- !u!114 &2113312933
 MonoBehaviour:
   m_ObjectHideFlags: 0

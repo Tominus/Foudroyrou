@@ -39,7 +39,7 @@ public class F_PlayerMovement : MonoBehaviour
     }
     void YawRotation(float _axis)
     {
-        transform.RotateAround(transform.position, Vector3.up, _axis);
+        transform.RotateAround(transform.position, Vector3.up, _axis * rotateSpeed * Time.deltaTime);
     }
 
     private void OnDrawGizmos()
