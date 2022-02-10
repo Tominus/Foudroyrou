@@ -30,6 +30,7 @@ public enum ActionType
     NONE,
     JUMP,
     DASH,
+    SHOOT,
 }
 
 public enum KeyType
