@@ -6,6 +6,7 @@ public class F_Player : MonoBehaviour
     #region Fields&Properties
     F_PlayerMovement movement = null;
     F_PlayerRageComponent rage = null;
+    public F_PlayerRageComponent PlayerRageComponent => rage;
     [SerializeField, Header("Components")] F_Gun gun = null;
     public bool IsValid => movement && rage && gun;
     #endregion

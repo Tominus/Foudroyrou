@@ -5,28 +5,28 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
 {
     public event Action OnDeath = null;
     float hp = 0;
+    F_NPCMovement movement = null;
+    F_MetamorphComponent metamorphComponent = null;
     [SerializeField] float hpMax = 100;
+    [SerializeField] float rageGive = 1;
     [SerializeField] float rangeAttack = 0.5f;
     [SerializeField] float rangeAgro = 10;
 
     [SerializeField] string id = "NPC";
     public string ID => id;
-    public bool IsValid => true;
-
-    F_MetamorphComponent metamorphComponent = null;
     public F_MetamorphComponent MetamorphComponent => metamorphComponent;
+    public bool IsValid => movement && metamorphComponent;
+
     private void Start() => InitItem();
     private void OnDestroy() => DestroyItem();
-    public void MakeAction(Transform _target)
+    public void MakeAction(F_Player _target)
     {
         if (!_target) return;
-        float _distance = Vector3.Distance(_target.position,transform.position);
-        if (_distance < rangeAgro)
-           //MoveTo Target
-            ;
+        float _distance = Vector3.Distance(_target.transform.position,transform.position);
+        if (_distance <= rangeAgro)
+            movement.Movement(_target.transform);
         if (_distance <= rangeAttack)
-            //Damage Target
-            ;
+            _target.PlayerRageComponent.AddRage(rageGive * Time.deltaTime);
     }
     public void TakeDamage(float _damage)
     {
@@ -42,6 +42,7 @@ public class F_NPC : MonoBehaviour,IManagedItem<string>
         hp = hpMax;
         F_NPCManager.Instance?.Add(this);
         metamorphComponent = GetComponent<F_MetamorphComponent>();
+        movement = GetComponent<F_NPCMovement>();
     }
     public void DestroyItem() => F_NPCManager.Instance?.Remove(this);
     public void Enable()
