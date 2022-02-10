@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5.277153, g: 5.1922607, b: 6.2618637, a: 1}
+  m_IndirectSpecularColor: {r: 5.626091, g: 5.9012146, b: 8.622787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -752,9 +752,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 287172457, guid: b939e4f061496e949ac3ffc931cf12fd, type: 3}
+      propertyPath: damageDeal
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 287172457, guid: b939e4f061496e949ac3ffc931cf12fd, type: 3}
       propertyPath: visualEffectOnShoot
       value: 
       objectReference: {fileID: 7254397981269309783, guid: 7a2e9c0a53744974bbc1f9b0c8186bc4, type: 3}
+    - target: {fileID: 5325522484486343409, guid: b939e4f061496e949ac3ffc931cf12fd, type: 3}
+      propertyPath: fPassifRageGrow
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7306806888349377672, guid: b939e4f061496e949ac3ffc931cf12fd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1157,6 +1165,10 @@ PrefabInstance:
     - target: {fileID: 3649569889508106130, guid: d014a370bc446d447ab08e51e1cffd95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649569889508106131, guid: d014a370bc446d447ab08e51e1cffd95, type: 3}
+      propertyPath: far clip plane
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3649569889508106134, guid: d014a370bc446d447ab08e51e1cffd95, type: 3}
       propertyPath: m_Name
