@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class SQ_Player : MonoBehaviour
@@ -47,7 +48,7 @@ public class SQ_Player : MonoBehaviour
     }
     void CheckQuestDistance(Vector3 _destination)
     {
-        if (Vector3.Distance(_destination, transform.position) < 0.1f)
+        if (Vector3.Distance(_destination, transform.position) < 1f)
         {
             if (haveQuest)
                 FinishQuest();
@@ -58,6 +59,7 @@ public class SQ_Player : MonoBehaviour
 
     void GetQuest()
     {
+        questID = Random.Range(1, 3);
         StartCoroutine(SQ_ConnectAPI.GetQuest<SQ_Quest>(questID, languageID, GetValidQuest, GetInvalidQuest));
         canMove = false;
     }
@@ -79,7 +81,7 @@ public class SQ_Player : MonoBehaviour
     {
         FinishQuestCompleted(true); //TODO DELETE
         //StartCoroutine(SQ_ConnectAPI.AskForEndQuest(questID, languageID, FinishQuestCompleted, FinishQuestInvalid));
-        canMove = false;
+        //canMove = false;
     }
     void FinishQuestCompleted(bool _state)
     {
