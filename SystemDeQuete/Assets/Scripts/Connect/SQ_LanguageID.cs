@@ -1,6 +1,6 @@
 
 public enum SQ_LanguageID
 {
-   Francais,
+   Francais = 1,
    English
 }
