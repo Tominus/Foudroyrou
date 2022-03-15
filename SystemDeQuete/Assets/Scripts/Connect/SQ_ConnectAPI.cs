@@ -15,7 +15,7 @@ public class SQ_ConnectAPI
         _form.AddField(QUEST_ID_NAME, _questID);
         _form.AddField(LANGUAGE_ID_NAME, (int)_languageID);
 
-        UnityWebRequest _request = UnityWebRequest.Get(SQ_BaseURL.QUEST_LINK);
+        UnityWebRequest _request = UnityWebRequest.Post(SQ_BaseURL.QUEST_LINK, _form);
         yield return _request.SendWebRequest();
 
         if (!string.IsNullOrEmpty(_request.error))

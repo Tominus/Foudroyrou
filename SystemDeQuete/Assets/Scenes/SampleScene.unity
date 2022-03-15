@@ -668,9 +668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc178e4c0724e2e48833920f4aac7843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  description: {fileID: 0}
-  reward: {fileID: 0}
+  title: {fileID: 100557280}
+  description: {fileID: 2138014741}
+  reward: {fileID: 1419612719}
 --- !u!1 &1412963818
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +971,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3383542009316308264, guid: ac656769a5be0be4b9a1fad3eca96b16, type: 3}
+      propertyPath: questID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383542009316308264, guid: ac656769a5be0be4b9a1fad3eca96b16, type: 3}
+      propertyPath: languageID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7000787899968697778, guid: ac656769a5be0be4b9a1fad3eca96b16, type: 3}
       propertyPath: m_Name
       value: Player
