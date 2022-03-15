@@ -36,7 +36,7 @@ public class SQ_Player : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         startPosition = transform.position;
         if (!IsValid) return;
-        GetQuest();
+        Invoke(nameof(GetQuest), Random.Range(2, 5));
     }
 
     void MoveToQuestPosition()
